@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Kamień, papier, nożyce</title>
-	<link rel="stylesheet" href="css/style.css">
+	<title>Stone, paper, scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<div id="buttons">
-            <button class="" id="play-rock">Kamień</button>
-            <button class="" id="play-paper">Papier</button>
-            <button class="" id="play-scissors">Nożyce</button>
+        <div class="game-title">Stone, Paper, Scissors</div>
+		<div class="buttons-section row" id="buttons">
+            <button class="btn flex-1 img img-1" id="play-rock">
+                <div class="overlay">
+                    <p>Stone</p>
+                </div>
+            </button>
+            <button class="btn flex-1 img img-2" id="play-paper">
+                <div class="overlay">
+                    <p>Paper</p>
+                </div>
+            </button>
+            <button class="btn flex-1 img img-3" id="play-scissors">
+                <div class="overlay">
+                    <p>Scissors</p>
+                </div>
+            </button>
         </div>
-		<div id="messages"></div>
+        <div class="info" id="messages"></div>
+        <div class="results row" id="result">
+            <div class="flex-1" id="computer-result">
+                <p>Computer score: </p>
+            </div>
+            <div class="flex-1" id="player-result">
+                <p>Your score: </p>
+            </div>
+        </div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>

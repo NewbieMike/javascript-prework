@@ -6,3 +6,10 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
+function battleResult(playerResult, computerResult){
+	computer = document.getElementById('computer-result')
+	player = document.getElementById('player-result')
+	computer.innerHTML = 'Computer result: ' + computerResult;
+	player.innerHTML = 'Player result: ' + playerResult;
+}

@@ -1,9 +1,1 @@
-{
-	"version": 3,
-	"file": "style.css",
-	"sources": [
-		"../sass/style.scss"
-	],
-	"names": [],
-	"mappings": ""
-}
+{"version":3,"sources":["../sass/style.scss"],"names":[],"mappings":"AAAA;EACI,8CAA6C;CAChD;;AACD;EACI,kBAAiB;EACjB,gBAAe;EACf,kBAAiB;EACjB,mBAAkB;CACrB;;AACD;EACI,qBAAa;EAAb,cAAa;EACb,sBAAiB;MAAjB,kBAAiB;CACpB;;AACD;EACI,mBAAkB;EAClB,aAAY;EACZ,mBAAkB;EAClB,iBAAgB;EAChB,wBAAuB;CAC1B;;AACD;EAAS,YAAO;MAAP,QAAO;CAAG;;AACnB;EACI,gBAAe;EACf,mBAAkB;EAClB,oBAAmB;CACtB;;AACD;EACI,iBAAgB;EAChB,mBAAkB;EAClB,gBAAe;CAClB;;AACD;EACI,gBAAe;EACf,mBAAkB;CACrB;;AACD;EACI,4BAA2B;EAC3B,uBAAsB;CAEzB;;AACD;EACI,mBAAkB;EAClB,kBAAwB;EACxB,eAAc;EACd,aAAY;EACZ,YAAW;EACX,qBAAoB;EACpB,WAAU;EACV,mBAAkB;CACrB;;AACD;EACI,gBAAe;EACf,aAAY;CACf;;AACD;EAAQ,iIAAgI;CAAG;;AAC3I;EAAQ,iIAAgI;CAAG;;AAC3I;EAAQ,mIAAkI;CAAG","file":"style.css"}

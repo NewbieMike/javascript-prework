@@ -1,0 +1,57 @@
+body {
+    font-family: 'Big Shoulders Display', cursive;
+}
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.btn {
+    text-align: center;
+    height: 33vh;
+    border-radius: 5px;
+    margin: 5px 10px;
+    border: 0px solid black;
+}
+.flex-1 {flex: 1;}
+.game-title {
+    font-size: 32px;
+    text-align: center;    
+    margin-bottom: 50px;
+}
+.info {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 22px;
+}
+.results {
+    font-size: 28px;
+    text-align: center;
+}
+.img {
+    background-position: center;
+    background-size: cover;
+    
+}
+.overlay{
+    text-align: center;
+    background: rgb(0, 0, 0);
+    color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    border-radius: 5px;
+}
+.overlay:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.img-1 {background-image: url("https://images.pexels.com/photos/355863/pexels-photo-355863.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");}
+.img-2 {background-image: url("https://images.pexels.com/photos/479453/pexels-photo-479453.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");}
+.img-3 {background-image: url("https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");}

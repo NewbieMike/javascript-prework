@@ -1,52 +1,79 @@
+let playerResult= 0;
+let computerResult= 0;
+
+
 function playGame(playerInput){
     clearMessages()
     function getMoveName(argMoveId){
         if(argMoveId == 1){
-            return 'kamień';
+        return 'stone';
+        } 
+        if(argMoveId == 2){
+            return 'paper';
         }
-        else if (argMoveId == 2){
-            return 'papier';
+        if(argMoveId == 3){
+            return 'scissors';
         }
-        else if (argMoveId == 3){
-            return 'nożyce';
+        else {
+        printMessage('Wrong id ' + argMoveId + '.');
+        return 'Unknown move';
         }
-        printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-            return 'nieznany ruch';
     }
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    console.log('Wylosowana liczba to: ' + randomNumber);
+    let computerMove = getMoveName(randomNumber)
 
-    let computerMove =  getMoveName(randomNumber);
-
-    printMessage('Mój ruch to: ' + computerMove);
-
-    console.log('Gracz wpisał: ' + playerInput);
-
-    let playerMove = getMoveName(playerInput);
-    printMessage('Twój ruch to: ' + playerMove);
-
-    function displayResult (argComputerMove, argPlayerMove) {
-        printMessage('Komputer zagrał '+ argComputerMove + ', a Ty: ' + argPlayerMove);
-
-        if(argComputerMove == 'kamień' && argPlayerMove == 'papier')
-        {printMessage('Ty wygrywasz!');}
-    else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce')
-    {printMessage('Przegrałeś! :(');}
-    else if (argComputerMove == 'papier' && argPlayerMove == 'kamień')
-    {printMessage('Przegrałeś! :(');}
-    else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce'){printMessage('Wygrałeś!')}
-    else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier')
-    {printMessage('Niestety, ale przegrałeś');}
-    else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){printMessage('Wygrywasz!');}
-    else if (argComputerMove == argPlayerMove){printMessage('Remis!');}
-    else if (argPlayerMove == 'nieznany ruch'){printMessage('Ups, coś poszło nie tak. Spróbój ponownie wpisując tylko cyfry od 1 do 3')}
+    let playerMove = getMoveName(playerInput)
+    function playerWin(){
+        playerResult++;
+    }
+    function computerWin(){
+        computerResult++;
+    }
+    function draw(){
+        playerResult++;
+        computerResult++;
+    }
+    function displayResult(argComputerMove, argPlayerMove){
+        printMessage('I played ' + argComputerMove + ', and you played ' + argPlayerMove);
+        if ( argComputerMove == argPlayerMove ) {
+            draw();
+            printMessage('Draw!');
+        }
+        else if( argComputerMove == 'stone' && argPlayerMove == 'paper'){
+            playerWin();
+            printMessage('You win!');
+        } 
+        else if (argComputerMove == 'stone' && argPlayerMove == 'scissors'){
+            computerWin();
+            printMessage('You lose!');
+        }
+        else if (argComputerMove == 'paper' && argPlayerMove == 'stone'){
+            computerWin();
+            printMessage('You lose!');
+        }
+        else if (argComputerMove == 'scissors' && argPlayerMove == 'paper'){
+            computerWin();
+            printMessage('You lose!');
+        }
+        else if (argComputerMove == 'scissors' && argPlayerMove == 'stone'){
+            playerWin();
+            printMessage('You win!');
+        }
+        else if (argComputerMove == 'paper' && argPlayerMove == 'scissors'){
+            playerWin();
+            printMessage('You win!');
+        }
+        else (argPlayerMove == 'Unknown move')
+        battleResult(playerResult, computerResult);
+    }
+    displayResult(computerMove, playerMove)
+    
+        console.log("Wynik to" + playerResult + computerResult)
     }
 
-    let finalResult = displayResult (computerMove, playerMove)
-}
+
 document.getElementById('play-rock').addEventListener('click', function(){playGame(1)})
 document.getElementById('play-paper').addEventListener('click', function(){playGame(2)})
 document.getElementById('play-scissors').addEventListener('click', function(){playGame(3)})
-
