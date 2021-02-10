@@ -1,22 +1,28 @@
+//Deklaracja zmiennych (początkowego wyniku)
 let playerResult= 0;
 let computerResult= 0;
 
+// Deklaracja stałych 
+const stone = 'stone',
+      paper = 'paper',
+      scissors = 'scissors';
+console.log(stone, paper, scissors)
 
 function playGame(playerInput){
     clearMessages()
     function getMoveName(argMoveId){
         if(argMoveId == 1){
-        return 'stone';
+            return stone;
         } 
         if(argMoveId == 2){
-            return 'paper';
+            return paper;
         }
         if(argMoveId == 3){
-            return 'scissors';
+            return scissors;
         }
         else {
-        printMessage('Wrong id ' + argMoveId + '.');
-        return 'Unknown move';
+            printMessage('Wrong id ' + argMoveId + '.');
+            return 'Unknown move';
         }
     }
 
@@ -25,6 +31,7 @@ function playGame(playerInput){
     let computerMove = getMoveName(randomNumber)
 
     let playerMove = getMoveName(playerInput)
+
     function playerWin(){
         playerResult++;
     }
