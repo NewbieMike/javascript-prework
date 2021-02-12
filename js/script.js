@@ -26,11 +26,11 @@ function playGame(playerInput){
         }
     }
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    let computerMove = getMoveName(randomNumber)
+    const computerMove = getMoveName(randomNumber)
 
-    let playerMove = getMoveName(playerInput)
+    const playerMove = getMoveName(playerInput)
 
     function playerWin(){
         playerResult++;
